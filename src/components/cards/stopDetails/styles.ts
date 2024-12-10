@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {widthPercentageToDP as wp} from 'react-native-responsive-screen';
-import {baseStyle, colors} from '../../../constant/theme';
+import {baseStyle, colors, sizes} from '../../../constant/theme';
 
 const styles = StyleSheet.create({
   container: {
@@ -69,12 +69,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   lastStop: {
-    height: wp('4.3%'),
-    width: wp('4.3%'),
+    height: wp('3%'),
+    width: wp('3%'),
     transform: [{rotate: '45deg'}],
   },
   dot: {
-    ...baseStyle.circleView(wp('1%')),
+    ...baseStyle.circleView(wp('0.85%')),
   },
   horizontalLineView1: {
     borderWidth: 1,
@@ -87,7 +87,49 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '10%',
   },
-  place:{width: '95%', flex: 1}
+  place: {width: '95%', flex: 1},
+  detailsView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: wp('2%'),
+    alignSelf: 'center',
+  },
+  commonRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
+    paddingVertical: wp('2%'),
+    paddingHorizontal: wp('5%'),
+  },
+  horizontalLine: {
+    width: '90%',
+    height: wp('0.5%'),
+    backgroundColor: colors.white_F7,
+    marginVertical: wp('2%'),
+    alignSelf:"center"
+  },
+  margin: {
+    marginHorizontal: wp('4%'),
+  },
+  commonRowView: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '90%',
+    paddingVertical: wp('2%'),
+    alignSelf:"center"
+  },
+  button: {
+    backgroundColor: colors.orange_05,
+    borderRadius: wp('2%'),
+    paddingVertical: wp('3%'),
+    alignItems: 'center',
+    width: wp('75%'),
+  },
+  textStyle: {
+    ...baseStyle.txtStyleOutInterMedium(sizes.size2, colors.white_FF),
+  },
 });
 
 export default styles;
